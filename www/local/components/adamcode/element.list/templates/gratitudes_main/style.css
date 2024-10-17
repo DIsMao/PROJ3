@@ -1,0 +1,76 @@
+/*! CSS Used from: http://10.10.11.125/HTMLexamples/Renna1/css/index.css */
+
+.owlGrat .owl-nav{position:absolute;right:20px;bottom:40px;display: flex; justify-content: space-between; width: 100px;}
+.owlGrat .owl-nav .owl-prev{}
+.owlGrat .owl-nav .owl-next{}
+.owlGrat .animate{animation:shimmer 2s infinite linear;background:linear-gradient(to right, #ededed 4%, #d3d3d3 25%, #ededed 36%);background-size:1000px 100%;}
+.owlGrat.owl-carousel .owl-item img {
+    display: block;
+    width: auto;
+}
+.gratitude{display:flex;flex-direction:column;padding:24px;background:var(--peach-colour);}
+.gratitude.empty{background:linear-gradient(to right, #ededed 4%, #d3d3d3 25%, #ededed 36%);background-size:1000px 100%;}
+.gratitude-hide{visibility:hidden;}
+.gratitude-card{display:flex;}
+.gratitude-card-img{min-width:64px;width:64px;height:64px;border-radius:4px;cursor:pointer;overflow: hidden;}
+.gratitude-card-img img{
+    width: 100% !important;
+}
+.gratitude-card-info{margin-left:16px;display:flex;flex-direction:column;}
+.gratitude-card-thanks{font-family:"TT Commons";font-style:normal;font-weight:normal;font-size:13px;line-height:15px;color:#1E1B1F;margin-bottom:8px;}
+.gratitude-card-name{font-family:"TT Commons";font-style:normal;font-weight:500;font-size:16px;line-height:16px;color:#1E1B1F;margin:0;cursor:pointer;}
+.gratitude-card-name:hover{color:#1E1B1F;text-decoration:none;}
+.slider_desc{margin-top:15px;margin-bottom:8px;font-family:"TT Commons";font-style:normal;font-weight:normal;font-size:14px;line-height:17px;color:#1E1B1F;text-align:left;overflow:hidden;transition:all 1s ease 0s;max-height:51px;}
+.slider_desc_toogler{display:flex;align-items:center;}
+.slider_desc_toogler a{margin:0;font-family:"TT Commons";font-style:normal;font-weight:normal;font-size:14px;line-height:120%;color:#81859C!important;cursor:pointer;}
+.slider_desc_toogler a:hover{text-decoration:none;}
+.gratitude-btn-icon{margin-left:8px;transition:all 0.4s ease;}
+.gratitude-line{height:4px;width:40px;background:var(--pink-color);margin-top:26px;}
+.gratitude-from-container{margin-top:17px;display:flex;}
+.owlGrat .owl-carousel{display:block!important;max-width:100%;}
+.owlGrat .owl-carousel .owl-item img{width:auto!important;}
+.gratitude-from{font-family:"TT Commons";font-style:normal;font-weight:normal;font-size:14px;line-height:16px;color:#1E1B1F;}
+.gratitude-from-name{margin-left:10px;font-family:"TT Commons";font-style:normal;font-weight:normal;font-size:14px;line-height:16px;color:#1E1B1F;cursor:pointer;}
+.gratitude-from-name:hover{color:#1E1B1F;text-decoration:none;}
+.gratitude-footer{display:flex;justify-content:space-between;margin-top:30px;align-items:center;}
+.gratitude-datetime{display:flex;flex-direction:column;}
+.gratitude-time{font-family:"TT Commons";font-style:normal;font-weight:normal;font-size:13px;line-height:15px;color:#81859C;display:flex;align-items:center;margin:0;}
+.gratitude-time-icon{margin-right:8px;height:12px;width:12px;}
+.gratitude-date{font-family:"TT Commons";font-style:normal;font-weight:normal;font-size:13px;line-height:15px;color:#81859C;display:flex;align-items:center;margin-top:8px;margin-bottom:0;}
+.gratitude-date-icon{margin-right:8px;height:12px;width:12px;}
+.owlGrat .arrow-left{border:solid black;border-width:0 2px 2px 0;display:inline-block;padding:3px;transform:rotate(135deg);-webkit-transform:rotate(135deg);}
+.owlGrat .arrow-right{border:solid black;border-width:0 2px 2px 0;display:inline-block;padding:3px;transform:rotate(-45deg);-webkit-transform:rotate(-45deg);margin-right:2px;}
+.owlGrat .small-arrow-icon{width:40px;height:40px;border-radius:50%;background-color:#ffffff;display:flex;align-items:center;justify-content:center;}
+.owlGrat .owl-nav [class*=owl-]:hover{background:transparent;}
+.owlGrat .owl-nav [class*=owl-]:hover .small-arrow-icon{background:var(--pink-color);}
+.owlGrat .owl-nav [class*=owl-]:hover .small-arrow-icon i{border:solid white;border-width:0 2px 2px 0;}
+.owlGrat .small-arrow-icon:hover{background-color:var(--pink-color)!important;}
+.owlGrat .small-arrow-icon:hover i{border:solid white;border-width:0 2px 2px 0;}
+/*! CSS Used from: http://10.10.11.125/HTMLexamples/Renna1/css/corev15.css */
+.owlGrat img{border:none;-webkit-tap-highlight-color:transparent;}
+.owlGrat button{font-family:inherit;font-size:inherit;color:inherit;vertical-align:middle;}
+.owlGrat button{padding:7px 10px;border:1px solid #ababab;background-color:#fdfdfd;background-color:#fdfdfd;font-family:"Segoe UI","Segoe",Tahoma,Helvetica,Arial,sans-serif;font-size:11px;color:#444;}
+.owlGrat button:hover{border-color:#92c0e0;background-color:#e6f2fa;background-color:#e6f2fa;}
+.owlGrat button:active{border-color:#2a8dd4;background-color:#92b7d1;background-color:#92c0e0;}
+
+
+.owlGrat a:active{color:var(--pink-color);}
+.owlGrat a{color:var(--pink-color);text-decoration:none;}
+/*! CSS Used from: http://10.10.11.125/HTMLexamples/Renna1/css/media.css */
+
+@media screen and (-ms-high-contrast: active),  (-ms-high-contrast: none){
+    .gratitude{width:100%;}
+    .owlGrat  a{text-decoration:none;outline:none;}
+    .owlGrat  a:hover{text-decoration:none!important;outline:none!important;}
+    .owlGrat .owl-prev:hover{background-color:red;}
+}
+
+/*! CSS Used keyframes */
+@keyframes shimmer{0%{background-position:-1000px 0;}100%{background-position:1000px 0;}}
+@media (max-width: 480px) {
+
+    .main-slider .item {
+        height: 200px;
+    }
+
+}

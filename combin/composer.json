@@ -1,0 +1,29 @@
+{
+    "name": "adamcode/project",
+    "description": "desc",
+    "autoload": {
+        "psr-4": {
+            "Adamcode\\Util\\": "../www/local/util_classes/",
+            "Adamcode\\Config\\": "../www/local/config/",
+            "Adamcode\\Models\\": "../www/local/models/",
+            "Adamcode\\Services\\": "../www/local/Services/",
+            "Adamcode\\EventHandlers\\": "../www/local/event_handlers/"
+
+        }
+    },
+    "require": {
+        "ge1i0n/bitrix-models": "^0.10.0",
+        "dmgpage/simplexlsx": "^1.0",
+        "mraspe/phpword": "^0.18.3",
+        "tigitz/php-spellchecker": "^0.7.0",
+        "psr/http-message": "^1.0.1",
+        "psr/container": "^1.0.0",
+        "psr/http-client": "^1.0.1",
+        "arrilot/bitrix-iblock-helper": "^0.3.4"
+    },
+    "config": {
+        "allow-plugins": {
+            "kylekatarnls/update-helper": true
+        }
+    }
+}

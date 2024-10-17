@@ -1,0 +1,5 @@
+<?php
+
+$MESS['PAGE_COMPONENT_NAME'] = 'Базовая страница';
+$MESS['PAGE_COMPONENT_DESCRIPTION'] = '';
+$MESS['PAGE_COMPONENT_VENDOR'] = 'Партнер';

@@ -1,0 +1,5 @@
+<?php
+
+$MESS['PAGE_GROUP_SETTINGS'] = 'Настройки';
+$MESS['PAGE_PARAMETERS_PARAMETER_1'] = 'Параметр 1';
+$MESS['PAGE_PARAMETERS_PARAMETER_1_DEFAULT'] = 'Значение';

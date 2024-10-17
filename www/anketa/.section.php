@@ -1,0 +1,4 @@
+<?
+$sSectionName = "Анкета";
+$arDirProperties = array();
+?>

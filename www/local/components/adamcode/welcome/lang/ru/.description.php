@@ -1,0 +1,5 @@
+<?php
+
+$MESS['WELCOME_COMPONENT_NAME'] = 'Приветственный виджет';
+$MESS['WELCOME_COMPONENT_DESCRIPTION'] = '';
+$MESS['WELCOME_COMPONENT_VENDOR'] = 'Партнер';

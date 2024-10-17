@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hiblock>
+	<hiblock>
+		<id>2</id>
+		<name>Statistics</name>
+		<table_name>statistics</table_name>
+	</hiblock>
+	<langs>
+		<lang>
+			<id>2</id>
+			<lid>ru</lid>
+			<name>Статистика</name>
+		</lang>
+	</langs>
+	<fields>
+		<field>
+			<id>40</id>
+			<entity_id>HLBLOCK_2</entity_id>
+			<field_name>UF_DATE</field_name>
+			<user_type_id>datetime</user_type_id>
+			<xml_id />
+			<sort>100</sort>
+			<multiple>N</multiple>
+			<mandatory>N</mandatory>
+			<show_filter>N</show_filter>
+			<show_in_list>Y</show_in_list>
+			<edit_in_list>Y</edit_in_list>
+			<is_searchable>N</is_searchable>
+			<settings>
+				<default_value>
+					<type>NONE</type>
+					<value />
+				</default_value>
+				<use_second>Y</use_second>
+				<use_timezone>N</use_timezone>
+			</settings>
+			<edit_form_label>
+				<en />
+				<ru>Дата</ru>
+			</edit_form_label>
+			<list_column_label>
+				<en />
+				<ru />
+			</list_column_label>
+			<list_filter_label>
+				<en />
+				<ru />
+			</list_filter_label>
+			<error_message>
+				<en />
+				<ru />
+			</error_message>
+			<help_message>
+				<en />
+				<ru />
+			</help_message>
+			<base_type>datetime</base_type>
+		</field>
+		<field>
+			<id>41</id>
+			<entity_id>HLBLOCK_2</entity_id>
+			<field_name>UF_LINK_NAME</field_name>
+			<user_type_id>string</user_type_id>
+			<xml_id />
+			<sort>100</sort>
+			<multiple>N</multiple>
+			<mandatory>N</mandatory>
+			<show_filter>N</show_filter>
+			<show_in_list>Y</show_in_list>
+			<edit_in_list>Y</edit_in_list>
+			<is_searchable>N</is_searchable>
+			<settings>
+				<size>20</size>
+				<rows>1</rows>
+				<regexp />
+				<min_length>0</min_length>
+				<max_length>0</max_length>
+				<default_value />
+			</settings>
+			<edit_form_label>
+				<en />
+				<ru>Название ссылки</ru>
+			</edit_form_label>
+			<list_column_label>
+				<en />
+				<ru />
+			</list_column_label>
+			<list_filter_label>
+				<en />
+				<ru />
+			</list_filter_label>
+			<error_message>
+				<en />
+				<ru />
+			</error_message>
+			<help_message>
+				<en />
+				<ru />
+			</help_message>
+			<base_type>string</base_type>
+		</field>
+		<field>
+			<id>42</id>
+			<entity_id>HLBLOCK_2</entity_id>
+			<field_name>UF_URL</field_name>
+			<user_type_id>string</user_type_id>
+			<xml_id />
+			<sort>100</sort>
+			<multiple>N</multiple>
+			<mandatory>N</mandatory>
+			<show_filter>N</show_filter>
+			<show_in_list>Y</show_in_list>
+			<edit_in_list>Y</edit_in_list>
+			<is_searchable>N</is_searchable>
+			<settings>
+				<size>20</size>
+				<rows>1</rows>
+				<regexp />
+				<min_length>0</min_length>
+				<max_length>0</max_length>
+				<default_value />
+			</settings>
+			<edit_form_label>
+				<en />
+				<ru>Адрес ссылки</ru>
+			</edit_form_label>
+			<list_column_label>
+				<en />
+				<ru />
+			</list_column_label>
+			<list_filter_label>
+				<en />
+				<ru />
+			</list_filter_label>
+			<error_message>
+				<en />
+				<ru />
+			</error_message>
+			<help_message>
+				<en />
+				<ru />
+			</help_message>
+			<base_type>string</base_type>
+		</field>
+		<field>
+			<id>43</id>
+			<entity_id>HLBLOCK_2</entity_id>
+			<field_name>UF_USER</field_name>
+			<user_type_id>double</user_type_id>
+			<xml_id />
+			<sort>100</sort>
+			<multiple>N</multiple>
+			<mandatory>N</mandatory>
+			<show_filter>N</show_filter>
+			<show_in_list>Y</show_in_list>
+			<edit_in_list>Y</edit_in_list>
+			<is_searchable>N</is_searchable>
+			<settings>
+				<precision>4</precision>
+				<size>20</size>
+				<min_value>0</min_value>
+				<max_value>0</max_value>
+				<default_value />
+			</settings>
+			<edit_form_label>
+				<en />
+				<ru>Идентификатор пользователя</ru>
+			</edit_form_label>
+			<list_column_label>
+				<en />
+				<ru />
+			</list_column_label>
+			<list_filter_label>
+				<en />
+				<ru />
+			</list_filter_label>
+			<error_message>
+				<en />
+				<ru />
+			</error_message>
+			<help_message>
+				<en />
+				<ru />
+			</help_message>
+			<base_type>double</base_type>
+		</field>
+	</fields>
+</hiblock>

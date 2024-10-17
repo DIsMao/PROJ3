@@ -1,0 +1,395 @@
+extends ../../../../../pug/layout/_layout.pug
+include ../../../../../pug/layout/_head.pug
+include ../../../../../pug/layout/_header.pug
+include ../../../../../pug/ui/_btn.pug
+include ../../../../../pug/ui/_link.pug
+include ../../../../../pug/ui/_input.pug
+include ../../../../../pug/ui/_textarea.pug
+include ../../../../../pug/ui/_select.pug
+include ../../../../../pug/ui/_breadcrumbs.pug
+include ../../../../../pug/ui/_list.pug
+include ../../../../../pug/ui/_tags.pug
+include ../../../../../pug/ui/_toggle.pug
+include ../../../../../pug/ui/_radio.pug
+include ../../../../../pug/ui/_checkbox.pug
+include ../../../../../pug/ui/_widgetUser.pug
+include ../../../../../pug/ui/_search.pug
+include ../../../../../pug/ui/_inputFile.pug
+include ../../../../../pug/ui/_datepicker.pug
+include ../../../../../pug/ui/_pagination.pug
+include ../../../../../pug/ui/_orderCards.pug
+include ../../../../../pug/ui/_accordion.pug
+include ../../../../../pug/ui/_navCards.pug
+include ../../../../../pug/ui/_docCards.pug
+
+block scripts
+    - var path = "./local/templates/furnitureAssembly"
+    script(src=`${path}/libs/jquery/jquery-3.7.1.min.js`)
+    script(src=`${path}/libs/air-datepicker-3.4.0/air-datepicker.js`)
+    script(src=`${path}/js/common.js`)
+    script(src=`${path}/pages/kit/js/index.js`)
+
+
+block head
+  - var path = "./local/templates/furnitureAssembly"
+  link(rel="stylesheet", href=`${path}/libs/air-datepicker-3.4.0/air-datepicker.css`)
+  link(rel="stylesheet", href=`${path}/css/style.css`)
+  +head('kit - сборка мебели', '')
+
+block content
+    +header()
+    main(class="py-20")
+        div(class="container px-2 sm:px-0 mx-auto h-22 flex flex-col gap-6")
+            div(class="flex flex-col gap-3")
+                h2(class="font-montserrat font-semibold text-2xl text-black mb-4") Кнопки
+                div(class="flex gap-3 items-center")
+                    +btn("primary", "Отправить", "save", null, "lg")
+                    +btn("primary", "Отправить", "save", `${path}/img/other/loading2.gif`, "lg")
+                    +inputFile("file1")
+                    +btn(null, "Сохранить", "save", null, "lg")
+                    +btn(null, "Сохранить", "save", `${path}/img/icons/FloppyDisk.svg`, "lg")
+                    +toggle("toggle1")
+                    +radio("radio1")
+                    +checkbox("checkbox1")
+            div(class="flex flex-col gap-3")
+                h2(class="font-montserrat font-semibold text-2xl text-black mb-4") Ссылки
+                div(class="flex gap-3 ")
+                    +link("#", `${path}/img/icons/Link.svg`, "ссылка 1")
+                    +link("#", null, "ссылка 2")
+            div(class="flex flex-col gap-3")
+                h2(class="font-montserrat font-semibold text-2xl text-black mb-4") Поля ввода
+                div(class="flex gap-3")
+                    +input("text", "example@mail.com")
+                    div(class="w-96")
+                        +textarea("text", "Текст сообщения")
+                    - 
+                        var value = [
+                            {
+                                id: 1,
+                                name: "Заказать звонок",
+                            },
+                            {
+                                id: 2,
+                                name: "Заказать звонок 2",
+                            },
+                            {
+                                id: 3,
+                                name: "Заказать звонок 3",
+                            }
+                        ]
+                    div(class="min-w-28 h-full")
+                        +select("select", value)
+                    +search("search2", "Поиск по сотрудникам")
+                    +datepicker("datepicker", "Дата")
+            div(class="flex flex-col gap-3")
+                h2(class="font-montserrat font-semibold text-2xl text-black mb-4") Списки
+                div(class="flex gap-8")
+                    -
+                        var listItems = [
+                            {
+                                link: "#",
+                                name: "Антимонопольный комплекс",
+                                img: {
+                                    src: `${path}/img/icons/Compass.svg`,
+                                    color: null
+                                },
+                                chip: null,
+                            },
+                            {
+                                link: "#",
+                                name: "Информационная безопасность",
+                                img: {
+                                    src: `${path}/img/icons/Fingerprint.svg`,
+                                    color: null
+                                },
+                                chip: null,
+                            },
+                            {
+                                link: "#",
+                                name: "Юридическая деятельность",
+                                img: {
+                                    src: `${path}/img/icons/Bank.svg`,
+                                    color: null
+                                },
+                                chip: null,
+                            },
+                            {
+                                link: "#",
+                                name: "HelpDesk",
+                                img: {
+                                    src: `${path}/img/icons/SealQuestion.svg`,
+                                    color: null
+                                },
+                                chip: null,
+                            },
+                            {
+                                link: "#",
+                                name: "Блок руководителя",
+                                img: {
+                                    src: `${path}/img/icons/Crown.svg`,
+                                    color: null
+                                },
+                                chip: null,
+                            },
+                            {
+                                link: "#",
+                                name: "Новому сотруднику",
+                                img: {
+                                    src: `${path}/img/icons/Baby.svg`,
+                                    color: null
+                                },
+                                chip: null,
+                            },
+                        ]
+                    div(class="flex flex-col gap-6")
+                        +list(listItems)
+                    -
+                        var listItems2 = [
+                            {
+                                link: "#",
+                                name: "Антимонопольный комплекс",
+                                img: null,
+                                chip: null,
+                            },
+                            {
+                                link: "#",
+                                name: "Информационная безопасность",
+                                img: null,
+                                chip: null,
+                            },
+                            {
+                                link: "#",
+                                name: "Юридическая деятельность",
+                                img: null,
+                                chip: null,
+                            },
+                            {
+                                link: "#",
+                                name: "HelpDesk",
+                                img: null,
+                                chip: null,
+                            },
+                            {
+                                link: "#",
+                                name: "Блок руководителя",
+                                img: null,
+                                chip: null,
+                            },
+                            {
+                                link: "#",
+                                name: "Новому сотруднику",
+                                img: null,
+                                chip: null,
+                            },
+                        ]
+                    div(class="flex flex-col gap-6")
+                        +list(listItems2)
+                    -
+                        var listItems3 = [
+                            {
+                                link: "#",
+                                name: "Март",
+                                img: null,
+                                chip: "15",
+                            },
+                            {
+                                link: "#",
+                                name: "Февраль",
+                                img: null,
+                                chip: "18",
+                            },
+                            {
+                                link: "#",
+                                name: "Январь",
+                                img: null,
+                                chip: "15",
+                            },
+                            {
+                                link: "#",
+                                name: "Декабрь 2021",
+                                img: null,
+                                chip: "13",
+                            },
+                            {
+                                link: "#",
+                                name: "Ноябрь 2021",
+                                img: null,
+                                chip: "15",
+                            },
+                        ]
+                    div(class="flex flex-col gap-6")
+                        +list(listItems3)
+            div(class="flex flex-col gap-3")
+                h2(class="font-montserrat font-semibold text-2xl text-black mb-4") Хлебные крошки
+                div(class="flex gap-3")
+                    -
+                        var items = [
+                            {
+                                link: "#",
+                                name: "Главная",
+                            },
+                            {
+                                link: "#",
+                                name: "Новости",
+                            },
+                            {
+                                link: "#",
+                                name: "Текущая новость",
+                            },
+                        ]
+                    +breadcrumbs(items)
+            div(class="flex flex-col gap-3")
+                h2(class="font-montserrat font-semibold text-2xl text-black mb-4") Теги
+                div(class="flex gap-3")
+                    - 
+                        var tagsItems = [
+                            {
+                                color: null,
+                                name: "Развлечение"
+                            },
+                            {
+                                color: null,
+                                name: "Культура"
+                            },
+                            {
+                                color: null,
+                                name: "Бизнес"
+                            },
+                        ]
+                    +tags(tagsItems)
+            div(class="flex flex-col gap-3")
+                h2(class="font-montserrat font-semibold text-2xl text-black mb-4") Карточки
+                div(class="flex gap-8")
+                    -
+                        var user = {
+                            img: `${path}/img/people/Avatar_1.png`,
+                            name: "Иванов Иван"
+                        }
+                    +widgetUser(user)
+                    - 
+                        var orderItems = [
+                            {
+                                link: "#",
+                                name: "СП4815",
+                                date: "07.05.2024",
+                                status: {
+                                    name: "Новая",
+                                },
+                                executor: {
+                                    name: "Валиев А.Ф.",
+                                    link: "#"
+                                },
+                                client: {
+                                    name: "Петров А.В.",
+                                    phone: "+7-999-888-55-66"
+                                }
+                            },
+                            {
+                                link: "#",
+                                name: "СП4815",
+                                date: "07.05.2024",
+                                status: {
+                                    name: "В обработке",
+                                },
+                                executor: {
+                                    name: "Иванов А.А.",
+                                    link: "#"
+                                },
+                                client: {
+                                    name: "Петров А.В.",
+                                    phone: "+7-999-888-55-66"
+                                }
+                            }
+                        ]
+                    +orderCards(orderItems)
+                    -
+                        var navItems = [
+                            {
+                                name: "Страхование",
+                                link: "#",
+                                img: `${path}/img/icons/CreditCard.svg`
+                            },
+                        ]
+                    div(class="flex gap-2")
+                        +navCards(navItems)
+                    -
+                        var docItems = [
+                            {
+                                type: "Бланк",
+                                name: "Реквизиты заказчика и сведения о лице, уполномоченном подписать договор о проведении оценки",
+                                img: `${path}/img/icons/DocIcons.svg`,
+                                date: "17.01.2022",
+                                dateFrom: "17.01.2025",
+                            },
+                        ]
+                    div(class="flex gap-2")
+                        +docCards(docItems)
+            div(class="flex flex-col gap-3")
+                h2(class="font-montserrat font-semibold text-2xl text-black mb-4") Пагинация
+                div(class="flex gap-3")
+                    -
+                        var paginationItems = [
+                            {
+                                link: "#",
+                                name: "<",
+                                active: false,
+                            },
+                            {
+                                link: "#",
+                                name: "1",
+                                active: true,
+                            },
+                            {
+                                link: "#",
+                                name: "2",
+                                active: false,
+                            },
+                            {
+                                link: null,
+                                name: "...",
+                                active: false,
+                            },
+                            {
+                                link: "#",
+                                name: "4",
+                                active: false,
+                            },
+                            {
+                                link: "#",
+                                name: "5",
+                                active: false,
+                            },
+                            {
+                                link: "#",
+                                name: ">",
+                                active: false,
+                            },
+                        ]
+                    +pagination(paginationItems)
+            div(class="flex flex-col gap-3")
+                h2(class="font-montserrat font-semibold text-2xl text-black mb-4") Компоненты
+                div(class="flex flex-col gap-12")
+                    include ../../../../../pug/Components/_order.pug
+                    -
+                        var accordionItems = [
+                            {
+                                title: "Текст",
+                                text: "Не следует, однако забывать, что постоянное информационно-пропагандистское обеспечение нашей деятельности в значительной степени обуславливает создание новых предложений. Разнообразный и богатый опыт новая модель организационной деятельности позволяет оценить значение форм развития. Не следует, однако забывать, что укрепление и развитие структуры влечет за собой процесс внедрения и модернизации модели развития. Не следует, однако забывать, что дальнейшее развитие различных форм деятельности требуют от нас анализа модели развития. Идейные соображения высшего порядка, а также реализация намеченных плановых заданий в значительной степени обуславливает создание соответствующий условий активизации.",
+                            },
+                            {
+                                title: "Текст",
+                                text: "Не следует, однако забывать, что постоянное информационно-пропагандистское обеспечение нашей деятельности в значительной степени обуславливает создание новых предложений. Разнообразный и богатый опыт новая модель организационной деятельности позволяет оценить значение форм развития. Не следует, однако забывать, что укрепление и развитие структуры влечет за собой процесс внедрения и модернизации модели развития. Не следует, однако забывать, что дальнейшее развитие различных форм деятельности требуют от нас анализа модели развития. Идейные соображения высшего порядка, а также реализация намеченных плановых заданий в значительной степени обуславливает создание соответствующий условий активизации.",
+                            },
+                            {
+                                title: "Текст",
+                                text: "Не следует, однако забывать, что постоянное информационно-пропагандистское обеспечение нашей деятельности в значительной степени обуславливает создание новых предложений. Разнообразный и богатый опыт новая модель организационной деятельности позволяет оценить значение форм развития. Не следует, однако забывать, что укрепление и развитие структуры влечет за собой процесс внедрения и модернизации модели развития. Не следует, однако забывать, что дальнейшее развитие различных форм деятельности требуют от нас анализа модели развития. Идейные соображения высшего порядка, а также реализация намеченных плановых заданий в значительной степени обуславливает создание соответствующий условий активизации.",
+                            },
+                            {
+                                title: "Текст",
+                                text: "Не следует, однако забывать, что постоянное информационно-пропагандистское обеспечение нашей деятельности в значительной степени обуславливает создание новых предложений. Разнообразный и богатый опыт новая модель организационной деятельности позволяет оценить значение форм развития. Не следует, однако забывать, что укрепление и развитие структуры влечет за собой процесс внедрения и модернизации модели развития. Не следует, однако забывать, что дальнейшее развитие различных форм деятельности требуют от нас анализа модели развития. Идейные соображения высшего порядка, а также реализация намеченных плановых заданий в значительной степени обуславливает создание соответствующий условий активизации.",
+                            },
+                        ]
+                    div(class="flex flex-col gap-2")
+                        +accordion(accordionItems)
+                    include ../../../../../pug/Components/_table.pug
+

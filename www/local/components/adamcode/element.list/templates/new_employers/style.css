@@ -1,0 +1,8 @@
+.card__new__employees__block .employees__item
+{
+	margin-bottom: 0;
+}
+.card__new__employees__block:nth-child(2)
+{
+	margin: auto 0;
+}

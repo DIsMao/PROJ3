@@ -1,0 +1,55 @@
+
+/*! CSS Used from: http://10.10.11.125/HTMLexamples/Renna1/css/gratitudes.css */
+.gratitudes-item{display:flex;flex-direction:column;background: var(--peach-colour);border-radius:4px;padding:24px;width:calc(100% - 30px);margin-top:24px;}
+.gratitudes-item-header{display:flex;justify-content:space-between;}
+.gratitudes-item-card{display:flex;}
+.gratitudes-item-from-sm{display:none;margin-top:23px;}
+.gratitudes-item-from-sm .gratitudes-item-from-text,.gratitudes-item-from-sm .gratitudes-item-from-who{line-height:24px;}
+.gratitudes-item-img{background-position:50% 50%;background-repeat:no-repeat;background-size:cover;border-radius:4px;width:48px;height:48px;min-width:48px;position:relative;cursor:pointer;}
+.gratitudes-item-img:after{content:url(http://10.10.11.125/HTMLexamples/Renna1/img/gratitudes-img-icon.svg);position:absolute;top:70%;right:-12px;width:24px;height:auto;}
+.gratitudes-item-img img{
+    width: 100%;
+}
+.gratitudes-item-info{display:flex;flex-direction:column;margin-left:16px;}
+.gratitudes-item-thanks{font-style:normal;font-weight:normal;font-size:14px;line-height:16px;margin-top:5px;margin-bottom:0;color:#1E1B1F;}
+.gratitudes-item-name{font-style:normal;font-weight:500;font-size:16px;line-height:18px;margin:0;color:#1E1B1F;}
+.gratitudes-item-name:visited{color:#1E1B1F;}
+.gratitudes-item-name:hover{color:var(--pink-color);text-decoration:none;}
+.gratitudes-item-company{font-style:normal;font-weight:normal;font-size:12px;line-height:14px;margin-top:6px;margin-bottom:0;text-transform:uppercase;}
+.gratitudes-item-company.green{color:#19BB4F;}
+.gratitudes-item-count{display:flex;}
+.gratitudes-item-count-num{font-style:normal;font-weight:bold;font-size:42px;line-height:48px;margin:0;color:#253289;}
+.gratitudes-item-count-text{font-style:normal;font-weight:normal;font-size:12px;line-height:60px;margin:0;margin-left:4px;color:#1E1B1F;}
+.gratitudes-item-from{display:flex;}
+.gratitudes-item-from-text{font-style:normal;font-weight:normal;font-size:14px;line-height:60px;margin:0;color:#1E1B1F;}
+.gratitudes-item-from-who{font-style:normal;font-weight:normal;font-size:14px;line-height:60px;margin:0;margin-left:10px;color:#1E1B1F;}
+.gratitudes-item-from-who:visited{color:#1E1B1F;}
+.gratitudes-item-from-who:hover{color:var(--pink-color);text-decoration:none;}
+.gratitudes-item-text{margin-top:19px;max-height:48px;overflow:hidden;font-style:normal;font-weight:normal;font-size:14px;line-height:120%;margin-bottom:0;color:#1E1B1F;transition:all 1s ease 0s;}
+.gratitudes-item-footer{display:flex;justify-content:space-between;margin-top:28px;}
+.gratitudes-link-show{font-style:normal;font-weight:normal;font-size:14px;line-height:120%;text-align:center;color:#81859C;cursor:pointer;}
+.gratitudes-link-show:hover{text-decoration:none;color:#81859C;}
+.gratitudes-item-datetime{display:flex;}
+.gratitudes-item-time{display:flex;align-items:center;}
+.gratitudes-item-date{display:flex;align-items:center;margin-left:24px;}
+.gratitudes-item-datetime-icon{width:12px;height:12px;margin-right:8px;}
+.gratitudes-item-datetime-text{margin:0;font-style:normal;font-weight:normal;font-size:13px;line-height:15px;margin-top:2px;color:#81859C;}
+/*! CSS Used from: http://10.10.11.125/HTMLexamples/Renna1/css/media.css */
+@media only screen and (max-width: 1199px){
+    .gratitudes-item{width:100%;}
+}
+@media only screen and (max-width: 767px){
+    .gratitudes-item-header{flex-direction:column;}
+    .gratitudes-item-from{display:none;}
+    .gratitudes-item-count{margin-left:62px;margin-top:9px;}
+    .gratitudes-item-from-sm{display:flex;}
+    .gratitudes-item-footer{flex-direction:column;margin-top:13px;}
+    .gratitudes-item-text{margin-top:0;}
+    .gratitudes-item-count-num{font-size:32px;line-height:37px;}
+    .gratitudes-item-count-text{font-size:12px;line-height:47px;}
+}
+@media screen and (-ms-high-contrast: active),  (-ms-high-contrast: none){
+    a{text-decoration:none;outline:none;}
+    a:hover{text-decoration:none!important;outline:none!important;}
+}
+

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PublishConfigData" autoUpload="On explicit save action" serverName="smart_filter" confirmBeforeUploading="false" confirmBeforeDeletion="false" autoUploadExternalChanges="true">
+    <option name="confirmBeforeDeletion" value="false" />
+    <option name="confirmBeforeUploading" value="false" />
+    <serverData>
+      <paths name="adamwebVM">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="aeroinspector">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="smart_filter">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/" local="$PROJECT_DIR$" web="/" />
+            <mapping local="" />
+          </mappings>
+          <excludedPaths>
+            <excludedPath path="/www/bitrix" />
+            <excludedPath path="/.bx_temp" />
+            <excludedPath path="/.bash_logout" />
+            <excludedPath path="/.bash_profile" />
+            <excludedPath path="/.bashrc" />
+            <excludedPath path="/www/upload" />
+          </excludedPaths>
+        </serverdata>
+      </paths>
+    </serverData>
+    <option name="myAutoUpload" value="ON_EXPLICIT_SAVE" />
+  </component>
+</project>

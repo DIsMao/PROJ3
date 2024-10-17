@@ -1,0 +1,81 @@
+extends ../../../../../pug/layout/_layout.pug
+include ../../../../../pug/layout/_head.pug
+include ../../../../../pug/layout/_header.pug
+include ../../../../../pug/ui/_list.pug
+
+block scripts
+    - var path = "./local/templates/furnitureAssembly"
+    script(src=`${path}/libs/jquery/jquery-3.7.1.min.js`)
+    script(src=`${path}/js/common.js`)
+    script(src=`${path}/pages/kit/js/index.js`)
+
+
+block head
+  - var path = "./local/templates/furnitureAssembly"
+  link(rel="stylesheet", href=`${path}/css/style.css`)
+  +head('Главная - сборка мебели', '')
+
+block content
+    +header()
+    main(class="py-20")
+      div(class="container mx-auto grid grid-cols-[78%_20%] gap-7")
+        div(class="")
+            <?php
+                include 'vendor/autoload.php';
+                $pug = new Pug([
+                    // here you can set options
+                ]);
+                $pug->displayFile('my-pug-template.pug');
+        div(class="flex flex-col gap-16")
+          include ../../../../../pug/Components/_widgetLKUser.pug
+          -
+            var listItems = [
+                {
+                    link: "#",
+                    name: "Заказы",
+                    img: {
+                        src: `${path}/img/icons/Package.svg`,
+                        color: null
+                    },
+                    chip: null,
+                },
+                {
+                    link: "#",
+                    name: "Диспетчерская",
+                    img: {
+                        src: `${path}/img/icons/Phone.svg`,
+                        color: null
+                    },
+                    chip: null,
+                },
+                {
+                    link: "#",
+                    name: "Зарплаты",
+                    img: {
+                        src: `${path}/img/icons/Coins.svg`,
+                        color: null
+                    },
+                    chip: null,
+                },
+                {
+                    link: "#",
+                    name: "Склад",
+                    img: {
+                        src: `${path}/img/icons/Garage.svg`,
+                        color: null
+                    },
+                    chip: null,
+                },
+                {
+                    link: "#",
+                    name: "Справочник",
+                    img: {
+                        src: `${path}/img/icons/ClipboardText.svg`,
+                        color: null
+                    },
+                    chip: null,
+                },
+            ]
+          div(class="flex flex-col gap-6")
+            +list(listItems)
+    include ../../../../../pug/layout/_footer.pug

@@ -1,0 +1,280 @@
+extends ../../../../../pug/layout/_layout.pug
+include ../../../../../pug/layout/_head.pug
+include ../../../../../pug/layout/_header.pug
+include ../../../../../pug/ui/_btn.pug
+include ../../../../../pug/ui/_list.pug
+include ../../../../../pug/ui/_select.pug
+include ../../../../../pug/ui/_input.pug
+include ../../../../../pug/ui/_textarea.pug
+include ../../../../../pug/ui/_datepicker.pug
+include ../../../../../pug/ui/_breadcrumbs.pug
+include ../../../../../pug/ui/_checkbox.pug
+include ../../../../../pug/ui/_inputFile.pug
+include ../../../../../pug/Components/_rowInput.pug
+
+block scripts
+    - var path = "./local/templates/furnitureAssembly"
+    script(src=`${path}/libs/jquery/jquery-3.7.1.min.js`)
+    script(src=`${path}/libs/air-datepicker-3.4.0/air-datepicker.js`)
+    script(src=`${path}/js/common.js`)
+    script(src=`${path}/pages/sozdanie-zakaza/js/index.js`)
+
+
+block head
+  - var path = "./local/templates/furnitureAssembly"
+  link(rel="stylesheet", href=`${path}/libs/air-datepicker-3.4.0/air-datepicker.css`)
+  link(rel="stylesheet", href=`${path}/css/style.css`)
+  +head('Создание заказа - сборка мебели', '')
+
+block content
+    +header()
+    main(class="py-20")
+      div(class="container mx-auto grid grid-cols-[78%_20%] gap-7")
+        div(class="flex flex-col gap-8")
+            -
+                var items = [
+                    {
+                        link: "#",
+                        name: "Главная",
+                    },
+                    {
+                        link: "#",
+                        name: "Создание заказа",
+                    },
+                ]
+            +breadcrumbs(items)
+            h1(class="font-montserrat font-semibold text-black text-4xl") Создание заказа
+            div(class="flex flex-col gap-8")
+                div(class="grid grid-cols-2 gap-4")
+                    div(class="flex flex-col gap-4")
+                        div(class="flex gap-3 items-center")
+                            p(class="font-montserrat font-semibold text-black") Заказ
+                            div(class="w-[89.6%]")
+                                +input("text", "Номер", "numberOrder")
+                        div(class="flex gap-3 items-center")
+                            p(class="font-montserrat font-semibold text-black") Дата приема заказа
+                            div(class="w-[70%]")
+                                +datepicker("datepicker", "Дата")
+                    div(class="flex flex-col gap-4")
+                        div(class="flex gap-3 items-center")
+                            p(class="font-montserrat font-semibold text-black") Кто оплачивает
+                            - 
+                                var value = [
+                                    {
+                                        id: 1,
+                                        name: "Анонс",
+                                    },
+                                    {
+                                        id: 2,
+                                        name: "Анонс 2",
+                                    },
+                                    {
+                                        id: 3,
+                                        name: "Анонс 3",
+                                    }
+                                ]
+                            div(class="w-[76.5%]")
+                                +select("select2", value)
+                        div(class="flex gap-3 items-center")
+                            p(class="font-montserrat font-semibold text-black") Статус
+                            - 
+                                var value = [
+                                    {
+                                        id: 1,
+                                        name: "Анонс",
+                                    },
+                                    {
+                                        id: 2,
+                                        name: "Анонс 2",
+                                    },
+                                    {
+                                        id: 3,
+                                        name: "Анонс 3",
+                                    }
+                                ]
+                            div(class="w-[90%]")
+                                +select("select3", value)
+                div(class="grid gap-7 grid-cols-[49%_49%]")
+                    div(class="flex flex-col gap-4")
+                        h2(class="flex items-center gap-2 font-montserrat font-semibold text-black text-2xl") 
+                            img(src=`${path}/img/icons/User.svg`, alt="иконка", class="w-6 h-6 object-contain mt-1")
+                            | Клиент
+                        div(class="flex gap-3 items-center")
+                            p(class="font-montserrat font-semibold text-black") ФИО Клиента
+                            div(class="w-[79%]")
+                                +input("text", "ФИО", "fio")
+                        div(class="flex gap-3 flex-col")
+                            div(class="flex gap-3 items-center")
+                                p(class="font-montserrat font-semibold text-black") Адрес дома
+                                div(class="w-[81%]")
+                                    +input("text", "Адрес", "address")
+                            div(class="grid grid-cols-[49%_49%] gap-3")
+                                div(class="flex flex-col gap-3")
+                                    p(class="font-montserrat font-semibold text-black") Подъезд
+                                    +input("text", "Подъезд", "entrance")
+                                div(class="flex flex-col gap-3")
+                                    p(class="font-montserrat font-semibold text-black") Этаж
+                                    +input("text", "Этаж", "floor")
+                                div(class="flex flex-col gap-3")
+                                    p(class="font-montserrat font-semibold text-black") Код\Домофон
+                                    +input("text", "Код\\Домофон", "intercom")
+                                div(class="flex flex-col gap-3")
+                                    p(class="font-montserrat font-semibold text-black") № Кв\Оф
+                                    +input("text", "№ Кв\\Оф", "room")
+                        div(class="flex flex-col gap-3 ")
+                            p(class="font-montserrat font-semibold text-black") Дополнительно
+                            div(class="w-full")
+                                +textarea("Additionally", "Текст сообщения")
+                        div(class="flex flex-col gap-3 ")
+                            p(class="font-montserrat font-semibold text-black") Точка
+                            div(class="flex gap-2 items-center")
+                                div(class="w-[40%]")
+                                    +input("text", "Координаты", "address")
+                                +btn("primary", "Определить", "define", null, "lg")
+                                +btn("primary", "Проверить на карте", "checkMap", null, "lg")
+                        div(class="flex gap-3 items-center")
+                            p(class="font-montserrat font-semibold text-black") Почтовый индекс
+                            div(class="w-[73%]")
+                                +input("text", "Номер", "MailIndex")
+                        div(class="flex gap-3 items-center")
+                            p(class="font-montserrat font-semibold text-black") Ближ ст.м.
+                            - 
+                                var value = [
+                                    {
+                                        id: 1,
+                                        name: "Анонс",
+                                    },
+                                    {
+                                        id: 2,
+                                        name: "Анонс 2",
+                                    },
+                                    {
+                                        id: 3,
+                                        name: "Анонс 3",
+                                    }
+                                ]
+                            div(class="w-[83.5%]")
+                                +select("select4", value)
+                        div(class="flex gap-3 items-center")
+                            p(class="font-montserrat font-semibold text-black") Наименование объекта
+                            div(class="w-[65%]")
+                                +input("text", "Наименование объекта", "NameObject")
+                        div(class="flex gap-3 items-center")
+                            p(class="font-montserrat font-semibold text-black") Контактные телефоны
+                            div(class="w-[67%]")
+                                +input("text", "Контактные телефоны", "phone")
+                    div(class="flex flex-col gap-4")
+                        h2(class="flex items-center gap-2 font-montserrat font-semibold text-black text-2xl") 
+                            img(src=`${path}/img/icons/Briefcase.svg`, alt="иконка", class="w-6 h-6 object-contain mt-1")
+                            | Партнер
+                        div(class="flex gap-3 items-center")
+                            p(class="font-montserrat font-semibold text-black") Партнер заказа
+                            - 
+                                var value = [
+                                    {
+                                        id: 1,
+                                        name: "Анонс",
+                                    },
+                                    {
+                                        id: 2,
+                                        name: "Анонс 2",
+                                    },
+                                    {
+                                        id: 3,
+                                        name: "Анонс 3",
+                                    }
+                                ]
+                            div(class="w-[76.5%]")
+                                +select("select", value)
+                        div(class="flex gap-3 items-center")
+                            p(class="font-montserrat font-semibold text-black") Номер заказа в магазине
+                            div(class="w-[63%]")
+                                +input("text", "Номер", "numberOrderInShop")
+                        h2(class="flex items-center gap-2 font-montserrat font-semibold text-black text-2xl") 
+                            img(src=`${path}/img/icons/ClipboardText.svg`, alt="иконка", class="w-6 h-6 object-contain mt-1")
+                            | Дополнительная информация
+                        div(class="flex flex-col gap-1")
+                            p(class="font-montserrat font-semibold text-black") Кухня:
+                            div(class="flex gap-3 items-center")
+                                p(class="font-montserrat font-semibold text-black") Оплата дальности (за МКАД) на месте
+                                +checkbox("range")
+                        div(class="flex flex-col gap-1")
+                            p(class="font-montserrat font-semibold text-black") План:
+                            div(class="flex gap-3 items-center")
+                                p(class="font-montserrat font-semibold text-black") Прайскурант цен выдан 
+                                +checkbox("price")
+                        div(class="flex flex-col gap-1")
+                            p(class="font-montserrat font-semibold text-black") Cхема проезда:
+                            div(class="flex gap-3 items-center")
+                                p(class="font-montserrat font-semibold text-black") С требованиями к помещению ознакомлен
+                                +checkbox("RoomRequirements")
+                        div(class="flex gap-3 items-center")
+                            p(class="font-montserrat font-semibold text-black") Дата и время начала сборки
+                            div(class="w-[58%]")
+                                +datepicker("datepicker2", "Дата и время")
+                        div(class="flex flex-col gap-3")
+                            p(class="font-montserrat font-semibold text-black") Примечания к заказу
+                            div(class="w-full")
+                                +textarea("AddInfo", "Примечания к заказу")
+            div(class="w-full")
+                div(class="flex flex-col gap-1")
+                    p(class="font-montserrat font-semibold text-black") Список услуг
+                    div(class="")
+                        +rowInput()
+            div(class="w-full")
+                div(class="flex gap-4 items-center ml-auto w-max")
+                    +inputFile("file1")
+                    +btn("secondary", "Отмена", "cansel", null, "lg")
+                    +btn("primary", "Создать", "save", null, "lg")
+        div(class="flex flex-col gap-16 mt-[4.25rem]")
+          -
+            var listItems = [
+                {
+                    link: "#",
+                    name: "Заказы",
+                    img: {
+                        src: `${path}/img/icons/Package.svg`,
+                        color: null
+                    },
+                    chip: null,
+                },
+                {
+                    link: "#",
+                    name: "Диспетчерская",
+                    img: {
+                        src: `${path}/img/icons/Phone.svg`,
+                        color: null
+                    },
+                    chip: null,
+                },
+                {
+                    link: "#",
+                    name: "Зарплаты",
+                    img: {
+                        src: `${path}/img/icons/Coins.svg`,
+                        color: null
+                    },
+                    chip: null,
+                },
+                {
+                    link: "#",
+                    name: "Склад",
+                    img: {
+                        src: `${path}/img/icons/Garage.svg`,
+                        color: null
+                    },
+                    chip: null,
+                },
+                {
+                    link: "#",
+                    name: "Справочник",
+                    img: {
+                        src: `${path}/img/icons/ClipboardText.svg`,
+                        color: null
+                    },
+                    chip: null,
+                },
+            ]
+          div(class="flex flex-col gap-6")
+            +list(listItems)
+    include ../../../../../pug/layout/_footer.pug

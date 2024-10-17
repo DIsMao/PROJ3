@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="SshConfigs">
+    <configs>
+      <sshConfig authType="PASSWORD" host="192.168.126.131" id="5ca9580f-7c5f-4c12-a117-f06f1b77a20d" port="22" customName="smart_filter" nameFormat="CUSTOM" username="bitrix" useOpenSSHConfig="true">
+        <option name="customName" value="smart_filter" />
+      </sshConfig>
+    </configs>
+  </component>
+</project>

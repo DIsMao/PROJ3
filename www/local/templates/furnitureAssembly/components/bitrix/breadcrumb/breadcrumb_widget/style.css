@@ -1,0 +1,26 @@
+a.breadcrumb {
+    font-size: 15px !important;
+    line-height: 140%;
+    color: #404040;
+    margin: 0;
+    margin-bottom: 10px !important;
+    margin-right: 5px !important;
+    position: relative;
+}
+a.breadcrumb::before {
+    content: '';
+
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    background: url('./images/level-next.svg') no-repeat 50%;
+    top: 40%;
+	left: -19px;
+   
+}
+ ul  li:first-child a.breadcrumb::before  {
+    background: none !important;
+}
+a.breadcrumb:hover {
+    color: #00a5ea !important;
+}

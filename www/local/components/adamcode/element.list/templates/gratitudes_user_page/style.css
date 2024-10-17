@@ -1,0 +1,64 @@
+/*! CSS Used from: http://10.10.11.125/HTMLexamples/Renna1/css/index.css */
+.owlGratUP .owl-nav button:focus{border:none;outline:none;}
+.owlGratUP .col-3 .owl-carousel{display:none!important;max-width:100vw;}
+.owlGratUP .arrow-left{border:solid black;border-width:0 2px 2px 0;display:inline-block;padding:3px;transform:rotate(135deg);-webkit-transform:rotate(135deg);}
+.owlGratUP .arrow-right{border:solid black;border-width:0 2px 2px 0;display:inline-block;padding:3px;transform:rotate(-45deg);-webkit-transform:rotate(-45deg);margin-right:2px;}
+.owlGratUP .small-arrow-icon{width:40px;height:40px;border-radius:50%;background-color:#ffffff;display:flex;align-items:center;justify-content:center;}
+.owlGratUP .small-arrow-icon:hover{background-color:var(--pink-color)!important;}
+.owlGratUP .small-arrow-icon:hover i{border:solid white;border-width:0 2px 2px 0;}
+/*! CSS Used from: http://10.10.11.125/HTMLexamples/Renna1/css/corev15.css */
+.owlGratUP img{border:none;-webkit-tap-highlight-color:transparent;}
+.owlGratUP button{font-family:inherit;font-size:inherit;color:inherit;vertical-align:middle;}
+.owlGratUP button{min-width:6em;padding:7px 10px;border:1px solid #ababab;background-color:#fdfdfd;background-color:#fdfdfd;margin-left:10px;font-family:"Segoe UI","Segoe",Tahoma,Helvetica,Arial,sans-serif;font-size:11px;color:#444;}
+.owlGratUP button:hover{border-color:#92c0e0;background-color:#e6f2fa;background-color:#e6f2fa;}
+.owlGratUP button:active{border-color:#2a8dd4;background-color:#92b7d1;background-color:#92c0e0;}
+/*! CSS Used from: http://10.10.11.125/HTMLexamples/Renna1/css/employee.css */
+.employee-gratitude-item-container{width:100%;display:flex;flex-direction:column;padding:24px 48px;}
+.employee-gratitude-item-header{display:flex;}
+.employee-gratitude-item-img{overflow:hidden;background-position:50% 50%;width:64px;height:64px;min-width:64px;background-repeat:no-repeat;background-size:cover;border-radius:4px;}
+.employee-gratitude-item-img img {
+    width: 100%;
+}
+.item.grat{border-radius:4px;width:100%;}
+.employee-gratitude-item-text{display:flex;flex-direction:column;margin-left:16px;}
+.employee-gratitude-item-thanks{font-style:normal;font-weight:normal;font-size:13px;line-height:15px;font-family:"TT Commons";margin-top:14px;margin-bottom:8px;}
+.employee-gratitude-item-name{font-family:"TT Commons";font-style:normal;font-weight:500;font-size:16px;line-height:16px;color:#1E1B1F;margin:0;}
+.employee-gratitude-item-description{margin-top:21px;font-style:normal;font-weight:normal;font-size:14px;line-height:17px;font-family:"TT Commons";color:#1E1B1F;margin-bottom:25px;}
+.employee-gratitude-item-line{width:40px;height:3px;background:var(--pink-color);}
+.employee-gratitude-item-footer{display:flex;justify-content:space-between;margin-top:14px;}
+.employee-gratitude-item-footer-left{display:flex;}
+.employee-gratitude-item-footer-right{display:flex;}
+.employee-gratitude-item-from{font-family:"TT Commons";font-style:normal;font-weight:normal;font-size:14px;line-height:16px;margin:0;margin-right:10px;color:#1E1B1F;}
+.employee-gratitude-item-who{font-family:"TT Commons";font-style:normal;font-weight:normal;font-size:14px;line-height:16px;margin:0;color:#1E1B1F;}
+.employee-gratitude-item-footer-right-item{display:flex;margin-right:13px;}
+.employee-gratitude-item-time-icon,.employee-gratitude-item-date-icon{width:12px;height:12px;margin-right:8px;}
+.employee-gratitude-item-time-text,.employee-gratitude-item-date-text{font-family:"TT Commons";font-style:normal;font-weight:normal;font-size:13px;line-height:15px;margin:0;color:#81859C;}
+#employee-carousel-grat{display:flex!important;width:100%;margin-top:9px;}
+#employee-carousel-grat .owl-nav{position:absolute;width:100%;height:100%;left:0;top:0;}
+#employee-carousel-grat .owl-nav .owl-prev{position:absolute;left:-20px;top:35%; z-index: 10;}
+#employee-carousel-grat .owl-nav .owl-prev:hover,#employee-carousel-grat .owl-nav .owl-next:hover{background:transparent;}
+#employee-carousel-grat .owl-nav .owl-prev div,#employee-carousel-grat .owl-nav .owl-next div{box-shadow:0 0 5px rgba(0, 0, 0, 0.5);}
+#employee-carousel-grat .owl-nav .owl-next{position:absolute;right:0px;top:35%;z-index:100;}
+/*! CSS Used from: http://10.10.11.125/HTMLexamples/Renna1/css/media.css */
+@media only screen and (max-width: 767px){
+    #employee-carousel-grat .owl-nav .owl-prev{position:absolute;left:calc(100% - 124px);top:75%;}
+    .employee-gratitude-item-footer-right{flex-direction:column;margin-top:30px;}
+    .employee-gratitude-item-time-icon,.employee-gratitude-item-date-icon{width:12px!important;height:12px;margin-right:8px;}
+    .employee-gratitude-item-footer-right-item{margin-top:8px;}
+    .employee-gratitude-item-container{padding:24px;}
+    .employee-gratitude-item-footer{flex-direction:column;margin-top:17px;}
+    #employee-carousel-grat .owl-nav .owl-next{position:absolute;right:-24px;top:75%;z-index:100;}
+    .owlGratUP .owl-carousel{display:block!important;}
+    .owlGratUP .col-3 .owl-carousel{display:block!important;}
+}
+@media screen and (-ms-high-contrast: active),  (-ms-high-contrast: none){
+    .owlGratUP .owl-prev:hover{background-color:red;}
+}
+
+.owl-carousel .owl-stage-outer{
+    z-index: 10;
+
+}
+.owlGratUP button{
+    min-width: auto !important;
+}

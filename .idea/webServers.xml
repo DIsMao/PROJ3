@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="3553e7e4-e3a5-45c1-8033-575a5d69f5e8" name="smart_filter">
+        <fileTransfer rootFolder="/home/bitrix" accessType="SFTP" host="192.168.126.131" port="22" sshConfigId="5ca9580f-7c5f-4c12-a117-f06f1b77a20d" sshConfig="smart_filter">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

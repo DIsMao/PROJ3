@@ -1,0 +1,4 @@
+.card__departament,new
+{
+    -webkit-line-clamp: 1 !important;
+}

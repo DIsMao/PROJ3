@@ -1,0 +1,161 @@
+extends ../../../../../pug/layout/_layout.pug
+include ../../../../../pug/layout/_head.pug
+include ../../../../../pug/layout/_header.pug
+include ../../../../../pug/ui/_btn.pug
+include ../../../../../pug/ui/_list.pug
+include ../../../../../pug/ui/_select.pug
+include ../../../../../pug/ui/_input.pug
+include ../../../../../pug/ui/_textarea.pug
+include ../../../../../pug/ui/_datepicker.pug
+include ../../../../../pug/ui/_breadcrumbs.pug
+include ../../../../../pug/ui/_checkbox.pug
+include ../../../../../pug/ui/_inputFile.pug
+
+block scripts
+    - var path = "./local/templates/furnitureAssembly"
+    script(src=`${path}/libs/jquery/jquery-3.7.1.min.js`)
+    script(src=`${path}/libs/air-datepicker-3.4.0/air-datepicker.js`)
+    script(src=`${path}/js/common.js`)
+    script(src=`${path}/pages/kartochka-zakaza/js/index.js`)
+
+
+block head
+  - var path = "./local/templates/furnitureAssembly"
+  link(rel="stylesheet", href=`${path}/libs/air-datepicker-3.4.0/air-datepicker.css`)
+  link(rel="stylesheet", href=`${path}/css/style.css`)
+  +head('Карточка заказа - сборка мебели', '')
+
+block content
+    +header()
+    main(class="py-20")
+      div(class="container mx-auto grid grid-cols-[78%_20%] gap-7")
+        div(class="flex flex-col gap-8")
+            -
+                var items = [
+                    {
+                        link: "#",
+                        name: "Главная",
+                    },
+                    {
+                        link: "#",
+                        name: "Заказы",
+                    },
+                    {
+                        link: "#",
+                        name: "№ СП4815",
+                    },
+                ]
+            +breadcrumbs(items)
+            h1(class="font-montserrat font-semibold text-black text-4xl") № СП4815
+            div(class="flex flex-col gap-8")
+                div(class="flex flex-col gap-4")
+
+                div(class="flex flex-col gap-4")
+                    h2(class="flex items-center gap-2 font-montserrat font-semibold text-black text-2xl") 
+                        img(src=`${path}/img/icons/User.svg`, alt="иконка", class="w-6 h-6 object-contain mt-1")
+                        | Клиент
+                    div(class="flex flex-col gap-2")
+                        div(class="flex gap-3 items-center")
+                            p(class="font-montserrat font-semibold text-black") ФИО: 
+                            p(class="font-montserrat font-semibold text-black") Иванов Иван Иванович
+                        div(class="flex gap-3 items-center")
+                            p(class="font-montserrat font-semibold text-black") Номер: 
+                            p(class="font-montserrat font-semibold text-black") +7 (999) 888 44 55
+                        div(class="flex gap-3 items-center")
+                            p(class="font-montserrat font-semibold text-black") Адрес: 
+                            p(class="font-montserrat font-semibold text-black") Московская область, Мытищи, жилой комплекс Мытищи Парк, кв.156
+                        div(class="flex gap-3 items-center")
+                            div(style="position:relative;overflow:hidden;")
+                                a(href="https://yandex.ru/maps/10740/mytischi/?utm_medium=mapframe&utm_source=maps", style="color:#eee;font-size:12px;position:absolute;top:0px;") Мытищи
+                                a(href="https://yandex.ru/maps/10740/mytischi/house/zhiloy_kompleks_mytishchi_park_4_2/Z04YcQFpQUACQFtvfXV1eXRlYg==/?ll=37.771888%2C55.949082&utm_medium=mapframe&utm_source=maps&z=17.08", style="color:#eee;font-size:12px;position:absolute;top:14px;") Жилой комплекс Мытищи Парк, 4.2 — Яндекс Карты
+                                iframe(src="https://yandex.ru/map-widget/v1/?ll=37.771888%2C55.949082&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgo1ODc0MjAyNTc3EnfQoNC-0YHRgdC40Y8sINCc0L7RgdC60L7QstGB0LrQsNGPINC-0LHQu9Cw0YHRgtGMLCDQnNGL0YLQuNGJ0LgsINC20LjQu9C-0Lkg0LrQvtC80L_Qu9C10LrRgSDQnNGL0YLQuNGJ0Lgg0J_QsNGA0LosIDQuMiIKDVQUF0IVpMtfQg%2C%2C&z=17.08", width="600", height="200", frameborder="1", allowfullscreen="true", style="position:relative;")
+                div(class="flex flex-col gap-4")
+                    h2(class="flex items-center gap-2 font-montserrat font-semibold text-black text-2xl") 
+                        img(src=`${path}/img/icons/ClipboardText.svg`, alt="иконка", class="w-6 h-6 object-contain mt-1")
+                        | Подробности
+                    div(class="flex flex-col gap-2")
+                        table(class="w-full text-base leading-6 border-t-0 border-b border-gray-300")
+                            thead
+                                tr
+                                    th(class="text-gray-400 pl-5 p-2 text-start") Виды работ
+                                    th(class="text-gray-400 pl-5 p-2 text-start") Кол-во
+                                    th(class="text-gray-400 pl-5 p-2 text-start") Ед.изм.
+                                    th(class="text-gray-400 pl-5 p-2 text-start") З/п (При 100% участии)
+                            tbody(class="border-t border-b border-gray-300")
+                                tr(class="bg-gray-100")
+                                    td(class="py-2 pl-5 pr-2") Работы по сборке кухонь, ванных комнат
+                                    td(class="py-2 pl-5 pr-2") 9.00
+                                    td(class="py-2 pl-5 pr-2") каркас (шт)
+                                    td(class="py-2 pl-5 pr-2") 8 910.00
+                                tr
+                                    td(class="py-2 pl-5 pr-2") Монтаж встр
+                                    td(class="py-2 pl-5 pr-2") 16 125
+                                    td(class="py-2 pl-5 pr-2") Аренда оборудования
+                                    td(class="py-2 pl-5 pr-2") Аренда оборудования
+                                tr(class="bg-gray-100")
+                                    td(class="py-2 pl-5 pr-2") 12.03.2022
+                                    td(class="py-2 pl-5 pr-2") 11 258
+                                    td(class="py-2 pl-5 pr-2") Аренда помещения
+                                    td(class="py-2 pl-5 pr-2") Аренда помещения
+                                tr
+                                    td(class="py-2 pl-5 pr-2") 13.03.2022
+                                    td(class="py-2 pl-5 pr-2") 10 578
+                                    td(class="py-2 pl-5 pr-2") Зарплата рабочему
+                                    td(class="py-2 pl-5 pr-2") Зарплата рабочему
+                                tr(class="bg-gray-100")
+                                    td(class="py-2 pl-5 pr-2") 13.03.2022
+                                    td(class="py-2 pl-5 pr-2") 13 573
+                                    td(class="py-2 pl-5 pr-2") Покупка материалов
+                                    td(class="py-2 pl-5 pr-2") Покупка материалов
+        div(class="flex flex-col gap-16 mt-[4.25rem]")
+          -
+            var listItems = [
+                {
+                    link: "#",
+                    name: "Заказы",
+                    img: {
+                        src: `${path}/img/icons/Package.svg`,
+                        color: null
+                    },
+                    chip: null,
+                },
+                {
+                    link: "#",
+                    name: "Диспетчерская",
+                    img: {
+                        src: `${path}/img/icons/Phone.svg`,
+                        color: null
+                    },
+                    chip: null,
+                },
+                {
+                    link: "#",
+                    name: "Зарплаты",
+                    img: {
+                        src: `${path}/img/icons/Coins.svg`,
+                        color: null
+                    },
+                    chip: null,
+                },
+                {
+                    link: "#",
+                    name: "Склад",
+                    img: {
+                        src: `${path}/img/icons/Garage.svg`,
+                        color: null
+                    },
+                    chip: null,
+                },
+                {
+                    link: "#",
+                    name: "Справочник",
+                    img: {
+                        src: `${path}/img/icons/ClipboardText.svg`,
+                        color: null
+                    },
+                    chip: null,
+                },
+            ]
+          div(class="flex flex-col gap-6")
+            +list(listItems)
+    include ../../../../../pug/layout/_footer.pug

@@ -1,0 +1,138 @@
+.inputRow{
+    display: grid;
+    grid-template-columns: 120px 300px;
+    gap: 20px;
+    align-items: center;
+}
+
+.fullGrid{
+    grid-template-columns: 120px auto;
+}
+
+.inputRow .capitalize.text-right{
+    text-align: right;
+}
+
+.inputRow.items-start{
+    align-items: flex-start;
+}
+
+.inputRow .capitalize.text-right:first-letter {
+    text-transform: uppercase;
+}
+.checkRow{
+    cursor: pointer;
+}
+.appForm{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.inputCol{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.zAppBtn{
+    padding: 10px 20px;
+    background-color: var(--pink-color);
+    border: 1px solid var(--pink-color);
+    color: white;
+    transition-duration: 0.5s;
+    cursor: pointer;
+}
+
+.zAppBtn:hover{
+    background-color: transparent;
+    color: var(--pink-color);
+}
+.zAppBtnRow{
+    margin-top: 40px;
+    display: flex;
+    gap: 20px;
+}
+.successBlock{
+    display: grid;
+    grid-template-columns: 300px auto;
+    gap: 40px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+.successBlock img{
+    width: 100%;
+    filter: var(--pink-filter);
+}
+.successText{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.successBlock .successText p {
+    font-size: 24px;
+    font-family: INTRO_BOLD ;
+    font-weight: 600;
+}
+
+.errorRow{
+    display: none;
+    color: red;
+    font-weight: bold;
+}
+
+.download-word-btn{
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--pink-color);
+    margin-top: 20px;
+}
+
+@media (max-width: 767px) {
+
+    .successBlock{
+
+        grid-template-columns:  auto;
+
+    }
+
+}
+.inputItem{
+    position: relative;
+}
+.searchPopBlock{
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+    left: 0px;
+    top: calc(100% + 10px);
+    z-index: 100;
+    background: white;
+    border: 1px solid black;
+    max-height: 200px;
+    overflow-y: scroll;
+}
+.popItem:hover{
+    color: var(--pink-color);
+    cursor: pointer;
+}
+#images{
+ display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+    display: none;
+}
+#images img{
+    width: 200px;
+    height: 120px;
+    object-fit: cover;
+}
+.error{
+    color: red;
+}
+.success{
+    color: #00ca00;
+}
